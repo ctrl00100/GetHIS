@@ -17,10 +17,10 @@ import { MessageBox, Message } from 'element-ui'
 // http response 拦截器
         service.interceptors.response.use(
         response => {
-        if (response.data.code !== 200) {
+        if (response.data.code !== 20000) {
         Message({
         message: response.data.message,
-        type: 'error',
+        type: 'errorcode !== 20000',
         duration: 5 * 1000
         })
         return Promise.reject(response.data)
